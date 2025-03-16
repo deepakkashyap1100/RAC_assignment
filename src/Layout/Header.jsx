@@ -55,18 +55,18 @@ console.log(scrollDown)
               <div className="navbar flex justify-center gap-4">
                 <ul className="flex main-menu">
                   <li>
-                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="/" onClick={()=>setShowHide(false) }>Home</NavLink>
                   </li>
                   <li>
-                    <NavLink to="about">About</NavLink>
+                    <NavLink to="about" onClick={()=>setShowHide(false) }>About</NavLink>
                   </li>
                   <li>
-                    <NavLink to="ourproduct">Our Products</NavLink>
+                    <NavLink to="ourproduct" onClick={()=>setShowHide(false) }>Our Products</NavLink>
                   </li>
                   <li>
-                    <NavLink to="catalog">Catalog</NavLink>
+                    <NavLink to="catalog" onClick={()=>setShowHide(false) }>Catalog</NavLink>
                   </li> 
-                  <li><NavLink to="not">Contact Us</NavLink></li>
+                  <li><NavLink to="not" onClick={()=>setShowHide(false) }>Contact Us</NavLink></li>
                 </ul>
               </div>
             </div>
