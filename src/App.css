@@ -129,7 +129,8 @@ a {
 }
 
 .navbar ul li a {
-  color: var(--white)
+  color: var(--white);
+  font-weight: 300;
 }
 
 .brand-logo>a>img {
