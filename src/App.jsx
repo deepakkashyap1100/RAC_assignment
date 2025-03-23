@@ -9,6 +9,7 @@ import Home from './Pages/Home';
 // import Projects from './Pages/Services';
 import OurProduct from './Pages/OurProduct';
 import AluminumProfile from './Pages/AluminumProfile';
+import { getApi } from './API/GetApi';
 
 function App() {
   const router = createBrowserRouter([
@@ -27,21 +28,18 @@ function App() {
         },
         {
           path: '/ourproduct',
-          element: <OurProduct />
+          element: <OurProduct />,
+          loader: getApi
         },
         {
           path: '/aluminum',
           element: <AluminumProfile />
         },
-        {
-          // path: '/project',
-          // element: <Projects />,
-          // loader: getApi
-        },
+ 
         // {
         //   path: '/contact',
         //   element: <Contact />,
-        //   // action: contactFormData 
+        //   action: contactFormData 
         // }
       ]
     },

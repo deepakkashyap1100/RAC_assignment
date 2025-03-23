@@ -1,5 +1,5 @@
-import  { useState } from "react";
-import { NavLink } from "react-router-dom";
+import  {useState } from "react";
+import { NavLink,  } from "react-router-dom";
 import topLogo from "../images/rac/logo.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 
@@ -16,7 +16,7 @@ const Header = () => {
 //   }, [IsDark]);
 const [showHide, setShowHide]= useState(false);
 const [scrollDown, setScrollDown]= useState(false);
-console.log(scrollDown)
+
   window.onscroll = function() {
     if (this.scrollY > 10) {
         setScrollDown(true);
@@ -26,9 +26,8 @@ console.log(scrollDown)
 };
 
 
-
   return (
-    <>
+    <> 
       <header className={`${showHide==true? 'show':'hide'}
         ${scrollDown==true?'headerfix': ''}
       `} 
@@ -57,9 +56,7 @@ console.log(scrollDown)
                   <li>
                     <NavLink to="/" onClick={()=>setShowHide(false) }>Home</NavLink>
                   </li>
-                  <li>
-                    <NavLink to="about" onClick={()=>setShowHide(false) }>About</NavLink>
-                  </li>
+                  
                   <li>
                     <NavLink to="ourproduct" onClick={()=>setShowHide(false) }>Our Products</NavLink>
                   </li>
